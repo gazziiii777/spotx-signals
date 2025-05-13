@@ -5,7 +5,7 @@ import os
 from aiogram import Bot, Dispatcher
 from logging_config import setup_logger
 from core.config import settings
-from app.database import init_db
+from app.db.database import init_db
 
 logger = setup_logger('main')
 
