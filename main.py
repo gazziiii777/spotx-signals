@@ -6,7 +6,6 @@ from aiogram import Bot, Dispatcher
 from logging_config import setup_logger
 from core.config import settings
 from app.db.database import init_db
-from app.services.parcer import BybitListingFetcher
 from app.bot.handlers import router
 
 logger = setup_logger('main')
@@ -28,9 +27,7 @@ async def on_startup():
     """Функция, которая выполняется при запуске бота."""
     logging.info("Бот запущен.")
     # bot.send_message(text="hi")
-    fetcher = BybitListingFetcher()
-    data = await fetcher.get_listings()
-    print(data)
+
 
 
 async def on_shutdown():
